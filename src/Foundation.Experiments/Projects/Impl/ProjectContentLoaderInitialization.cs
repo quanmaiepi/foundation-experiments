@@ -1,4 +1,4 @@
-﻿using System;
+﻿ using System;
 using System.Runtime.Caching;
 using System.Web;
 using EPiServer;
@@ -41,7 +41,6 @@ namespace Foundation.Experiments.Projects.Impl
             {
                 lock (Padlock)
                 {
-                    _cache = new MemoryCache("YS-Cache");
                     foreach (var projectMap in (e.Content as ProjectExperimentMapping).ExperimentMapping)
                     {
                         if (projectMap.ProjectId != null)

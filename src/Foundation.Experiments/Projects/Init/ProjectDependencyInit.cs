@@ -19,7 +19,7 @@ namespace Foundation.Experiments.Projects.Init
         {
             var services = e.Services;
             services.AddTransient<IProjectIdResolver, DefaultProjectIdResolver>();
-            services.AddTransient<IExperimentProjectIdentifier, ExperimentProjectIdentifier>();
+            services.AddSingleton<IExperimentProjectIdentifier, ExperimentProjectIdentifier>();
         }
 
         public void Initialize(InitializationEngine context) { }
